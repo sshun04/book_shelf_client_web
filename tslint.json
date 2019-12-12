@@ -1,5 +1,9 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
@@ -8,25 +12,39 @@
     ]
   },
   "rules": {
-    "member-ordering": [false, {"alphabetize": false, "order": [
-      "private-static-field",
-      "protected-static-field",
-      "public-static-field",
-      "private-static-method",
-      "protected-static-method",
-      "public-static-method",
-      "private-instance-field",
-      "protected-instance-field",
-      "public-instance-field",
-      "private-instance-method",
-      "protected-instance-method",
-      "public-instance-method",
-      "constructor"
-    ]}],
-
-    "ordered-imports": [false],
-    "object-literal-sort-keys": [false],
-    "interface-name": [false],
+    "member-ordering": [
+      false,
+      {
+        "alphabetize": false,
+        "order": [
+          "private-static-field",
+          "protected-static-field",
+          "public-static-field",
+          "private-static-method",
+          "protected-static-method",
+          "public-static-method",
+          "private-instance-field",
+          "protected-instance-field",
+          "public-instance-field",
+          "private-instance-method",
+          "protected-instance-method",
+          "public-instance-method",
+          "constructor"
+        ]
+      }
+    ],
+    "member-access": [
+      false
+    ],
+    "ordered-imports": [
+      false
+    ],
+    "object-literal-sort-keys": [
+      false
+    ],
+    "interface-name": [
+      false
+    ],
     "no-console": false
   }
 }

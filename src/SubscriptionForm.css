@@ -1,0 +1,45 @@
+.subscriptionForm {
+    font-family: "YuMincho";
+}
+.signUpArea{
+    width: fit-content;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+.signUpArea form table tbody{
+   vertical-align: middle;
+}
+
+tr{
+   height: 64px;
+}
+
+tr th{
+    width: 128px;
+    text-align: left;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+tr input{
+    height: 88px;
+    font-size: 12px;
+    outline: none;
+}
+tr input{
+    height: 40px;
+    width: 368px;
+}
+.btnSignUp{
+    width: 100%;
+    font-weight: bold;
+    outline: none;
+    font-size: 14px;
+    background-color: #eca21b;
+    color: white;
+}
+.btnSignUp :hover{
+    background-color: #ffb41b;
+}
