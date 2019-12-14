@@ -1,6 +1,6 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './SubscriptionForm.css';
+import '../../../statics/css/auth/SubscriptionForm.css';
 
 interface Props {
     value: string
@@ -12,7 +12,7 @@ interface SubscriptionState {
     password: string
 }
 
-class SubscriptionForm extends React.Component<Props, SubscriptionState> {
+class SubscriptionFormComponent extends React.Component<Props, SubscriptionState> {
     constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
@@ -65,7 +65,7 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
         return (
             <div className="subscriptionForm  container">
                 <div className="justify-content-center text-center">
-                    <h1 className="h1 mb-2">新規登録</h1>
+                    <h1 className="h1 mb-3">新規登録</h1>
                     <h2 className="h4">ようこそBookStorageへ</h2>
                     <br/>
                     <div className="signUpArea mx-auto">
@@ -107,4 +107,4 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
     }
 }
 
-export default SubscriptionForm;
+export default SubscriptionFormComponent;

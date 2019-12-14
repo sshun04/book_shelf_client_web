@@ -1,0 +1,31 @@
+.top{
+    height:fit-content;
+}
+.top .row{
+    margin: 0;
+}
+.top .container{
+    height: 100%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 8px;
+    padding: 8px;
+}
+.topWrapper{
+    position: relative;
+    border-radius: 8px;
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+    background-color: white;
+}
+.userIcon img{
+    background-color: #20c997;
+}
+.userName{
+    text-align: center;
+    font-size: 24px;
+}
+
+.topWrapper table{
+    max-width: 60%;
+}

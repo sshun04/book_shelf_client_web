@@ -1,0 +1,14 @@
+.sectionHeader{
+    position: relative;
+    width: 100%;
+}
+.sectionHeader span {
+    font-size: 16px;
+    color: rgba(0,0,0,0.54);
+}
+
+.checkAll {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+}

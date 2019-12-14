@@ -11,7 +11,7 @@ interface LoginState {
 }
 
 
-class LoginForm extends React.Component<Props, LoginState> {
+class LoginFormComponent extends React.Component<Props, LoginState> {
     constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
@@ -78,4 +78,4 @@ class LoginForm extends React.Component<Props, LoginState> {
     }
 }
 
-export default LoginForm;
+export default LoginFormComponent;

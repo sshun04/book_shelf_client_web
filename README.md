@@ -247,7 +247,7 @@ You would need to install an ESLint plugin for your editor first. Then, add a fi
 
 ```js
 {
-  "extends": "react-app"
+  "extends": "react-view"
 }
 ```
 
@@ -2141,7 +2141,7 @@ For more information see [Add Firebase to your JavaScript Project](https://fireb
 Open your `package.json` and add a `homepage` field for your project:
 
 ```json
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://myusername.github.io/my-view",
 ```
 
 or for a GitHub user page:

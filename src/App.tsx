@@ -1,7 +1,9 @@
 import * as React from 'react';
-import './App.css';
+import './statics/css/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import SubscriptionForm from "./SubscriptionForm";
+import Header from "./view/Header";
+import UserHome from "./view/home/UserHome";
+import Footer from "./view/Footer";
 
 
 class App extends React.Component {
@@ -9,11 +11,12 @@ class App extends React.Component {
     public render() {
         return (
             <div className="App">
-                <header className="App-header navbar"/>
+                <Header/>
                 <body>
                 <br/>
-                <SubscriptionForm value={"仮"}/>
+                <UserHome/>
                 </body>
+                <Footer/>
             </div>
         );
     }
