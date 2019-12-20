@@ -1,8 +1,16 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../../statics/css/auth/SubscriptionForm.css';
+import '../../../statics/css/auth/AuthForm.css';
+import {withRouter, RouteComponentProps} from 'react-router'
 
-interface Props {
+
+interface OwnProps extends RouteComponentProps {
+    // 親コンポーネントから渡ってきたpropsの型
+    value: string
+}
+
+interface Props extends OwnProps {
+    // コンポーネントに渡す型
     value: string
 }
 
@@ -12,7 +20,7 @@ interface SubscriptionState {
     password: string
 }
 
-class SubscriptionFormComponent extends React.Component<Props, SubscriptionState> {
+class SubscriptionForm extends React.Component<Props, SubscriptionState> {
     constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
@@ -24,6 +32,10 @@ class SubscriptionFormComponent extends React.Component<Props, SubscriptionState
         this.updatePassWord = this.updatePassWord.bind(this);
         this.updateEmail = this.updateEmail.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    NavigateToHome() {
+        this.props.history.push("/home")
     }
 
     updateName(event: React.FormEvent<HTMLInputElement>) {
@@ -57,13 +69,13 @@ class SubscriptionFormComponent extends React.Component<Props, SubscriptionState
         if (this.state.name.length === 0) {
             return;
         }
-
+        this.NavigateToHome()
     }
 
 
     public render() {
         return (
-            <div className="subscriptionForm  container">
+            <div className="authContainer container">
                 <div className="justify-content-center text-center">
                     <h1 className="h1 mb-3">新規登録</h1>
                     <h2 className="h4">ようこそBookStorageへ</h2>
@@ -98,7 +110,7 @@ class SubscriptionFormComponent extends React.Component<Props, SubscriptionState
                                 </tbody>
                             </table>
                             <br/>
-                            <button className="btn  btnSignUp pt-3 pb-3" type={"submit"} onClick={this.handleSubmit}>登録する</button>
+                            <button className="btn  btnAuthSubmit pt-3 pb-3" type={"submit"} onClick={this.handleSubmit}>登録する</button>
                         </form>
                     </div>
                 </div>
@@ -107,4 +119,4 @@ class SubscriptionFormComponent extends React.Component<Props, SubscriptionState
     }
 }
 
-export default SubscriptionFormComponent;
+export default withRouter(SubscriptionForm);

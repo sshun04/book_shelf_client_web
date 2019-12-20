@@ -1,6 +1,3 @@
-.subscriptionForm {
-    font-family: "YuMincho";
-}
 .signUpArea{
     width: fit-content;
     padding: 30px;
@@ -32,14 +29,14 @@ tr input{
     height: 40px;
     width: 368px;
 }
-.btnSignUp{
+.btnAuthSubmit{
     width: 100%;
     font-weight: bold;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #eca21b;
     color: white;
 }
-.btnSignUp :hover{
+.btnAuthSubmit :hover{
     background-color: #ffb41b;
 }

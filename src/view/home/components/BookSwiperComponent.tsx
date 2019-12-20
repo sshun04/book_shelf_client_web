@@ -5,10 +5,17 @@ import Swiper, {ReactIdSwiperProps} from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import '../../../statics/css/home/BookSwiper.css'
 
+interface BookSwiperProps {
+    header:string
+    numberOfBooks: number
+    link:string
+}
 
 
-
-class BookSwiperComponent extends React.Component {
+class BookSwiperComponent extends React.Component<BookSwiperProps,{}> {
+    constructor(props:Readonly<BookSwiperProps>) {
+        super(props);
+    }
     sliderParams: ReactIdSwiperProps = {
         spaceBetween: 30,
 
@@ -30,7 +37,7 @@ class BookSwiperComponent extends React.Component {
             <section>
                 <div className="container">
                     <div className="sectionHeader">
-                        <h5>未読の本<span className="ml-2">(20冊)</span></h5>
+                        <h5>{this.props.header}<span className="ml-2">({this.props.numberOfBooks}冊)</span></h5>
                         <div className="checkAll float-right"><a href="#">もっと見る</a></div>
                     </div>
                     <hr className="mt-2 mb-4"/>

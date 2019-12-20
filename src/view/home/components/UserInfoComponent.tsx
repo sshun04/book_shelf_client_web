@@ -7,7 +7,7 @@ interface UserInfoProps {
     numOfBook: number
     done: number
     notYet: number
-    thisMonth:number
+    thisMonth: number
 }
 
 class UserInfoComponent extends React.Component<UserInfoProps> {
@@ -26,7 +26,10 @@ class UserInfoComponent extends React.Component<UserInfoProps> {
                                      src="https://avatars1.githubusercontent.com/u/41961752?s=460&v=4"
                                      width="80px" height="80px"/>
                             </div>
-                            <div className="userName ml-3">Shunsukeさん</div>
+                            <div>
+                                <div className="userName ml-3">Shunsukeさん</div>
+                                <div className="userId ml-3">@ssh04</div>
+                            </div>
                         </div>
                         <br/>
                         <div className="row">
