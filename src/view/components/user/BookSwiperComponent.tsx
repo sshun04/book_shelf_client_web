@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Swiper, {ReactIdSwiperProps} from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-import '../../../statics/css/home/BookSwiper.css'
+import '../../../statics/css/user_home/BookSwiper.css'
 
 interface BookSwiperProps {
     header:string
@@ -28,7 +28,8 @@ class BookSwiperComponent extends React.Component<BookSwiperProps,{}> {
         slidesPerGroup: 5,
         slidesPerView: 5,
         loop: true,
-        containerClass: "swiper-container"
+        containerClass: "swiper-container",
+
     };
 
 

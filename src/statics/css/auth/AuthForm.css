@@ -8,18 +8,15 @@
 .signUpArea form table tbody{
    vertical-align: middle;
 }
-
 tr{
    height: 64px;
 }
-
 tr th{
     width: 128px;
     text-align: left;
     margin: 0 12px;
     font-size: 14px;
 }
-
 tr input{
     height: 88px;
     font-size: 12px;

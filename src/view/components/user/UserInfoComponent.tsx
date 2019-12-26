@@ -1,5 +1,5 @@
 import * as React from "react";
-import '../../../statics/css/home/UserInfo.css';
+import '../../../statics/css/user_home/UserInfo.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 interface UserInfoProps {
@@ -26,7 +26,7 @@ class UserInfoComponent extends React.Component<UserInfoProps> {
                                      src="https://avatars1.githubusercontent.com/u/41961752?s=460&v=4"
                                      width="80px" height="80px"/>
                             </div>
-                            <div>
+                            <div className="text-left">
                                 <div className="userName ml-3">Shunsukeさん</div>
                                 <div className="userId ml-3">@ssh04</div>
                             </div>
@@ -38,7 +38,7 @@ class UserInfoComponent extends React.Component<UserInfoProps> {
                                 <th scope="col">蔵書</th>
                                 <th scope="col">読了</th>
                                 <th scope="col">未読</th>
-                                <th scope="col">今月読んだ</th>
+                                <th scope="col" >今月</th>
                                 </thead>
                                 <tbody>
                                 <tr>

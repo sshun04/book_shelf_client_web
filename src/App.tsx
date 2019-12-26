@@ -3,16 +3,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "mdbreact/dist/css/mdb.css";
 import './statics/css/App.css';
 // import { createStore } from 'redux'
-import Header from "./view/Header";
 import Footer from "./view/Footer";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import UserHome from "./view/home/UserHome";
-import LoginFormComponent from "./view/auth/components/LoginForm";
-import SubscriptionFormComponent from "./view/auth/components/SubscriptionForm";
+import UserHomeContainer from "./view/container/UserHomeContainer";
+import ServiceTopContainer from "./view/container/ServiceTopContainer";
+import AuthContainer from "./view/container/AuthContainer";
 // import createBrowserHistory from 'history/createBrowserHistory';
 
-// const store = createStore()
-// const history = createBrowserHistory()
+// const store = createStore();
+// const history = createBrowserHistory();
 
 class App extends React.Component {
 
@@ -20,13 +19,9 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Router>
-                    <Header/>
-                    <br/>
-                    <body>
-                    <Route exact={true} path="/signup" component={SubscriptionFormComponent}/>
-                    <Route exact={true} path="/login" component={LoginFormComponent}/>
-                    <Route path="/home" component={UserHome}/>
-                    </body>
+                    <Route exact={true} path="/" component={ServiceTopContainer}/>
+                    <Route exact={true} path="/home" component={UserHomeContainer}/>
+                    <Route  path="/auth" component={AuthContainer}/>
                 </Router>
                 <Footer/>
             </div>

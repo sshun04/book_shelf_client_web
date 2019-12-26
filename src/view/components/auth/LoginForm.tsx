@@ -30,12 +30,13 @@ class LoginForm extends React.Component<Props, LoginState> {
             isUsingName: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.updateIdentity =this.updateIdentity.bind(this);
+        this.updateIdentity = this.updateIdentity.bind(this);
         this.updatePassWord = this.updatePassWord.bind(this);
         this.validateValue = this.validateValue.bind(this);
 
     }
-    navigateToHome(){
+
+    navigateToHome() {
         this.props.history.push("/home")
     }
 
@@ -52,13 +53,20 @@ class LoginForm extends React.Component<Props, LoginState> {
     }
 
     validateValue(): boolean {
-        return false
+        if (this.state.password.length < 8) {
+            console.log("password must be 8 characters or longer");
+            return false;
+        }
+        if (this.state.identity.length === 0) {
+            return false;
+        }
+        return true
     }
 
     handleSubmit() {
-        if (this.validateValue()) {
-            return;
-        }
+        // if (!this.validateValue()) {
+        //     return;
+        // }
         this.navigateToHome();
     }
 
@@ -68,28 +76,32 @@ class LoginForm extends React.Component<Props, LoginState> {
                 <div className="justify-content-center text-center">
                     <h1 className="h1 mb-3">ログイン</h1>
                     <p className="mb-0">アカウントをお持ちの方は、下記からログインしてください。</p>
-                    <p>  まだ登録してない方は<Link to="/signup">新規登録</Link>して下さい。</p>
+                    <p> まだ登録してない方は<Link to="/signup">新規登録</Link>して下さい。</p>
                     <br/>
                     <div className="signUpArea mx-auto">
                         <form>
                             <table>
                                 <tbody>
                                 <tr>
-                                    <th>ユーザーネームまたはメールアドレス</th>
+                                    <th>ユーザーネーム</th>
                                     <td>
-                                        <input type={"text"} value={this.state.identity} onChange={this.updateIdentity}/>
+                                        <input type={"text"} placeholder="ユーザーネーム" value={this.state.identity}
+                                               onChange={this.updateIdentity}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>パスワード</th>
                                     <td>
-                                        <input type={"text"} value={this.state.password} onChange={this.updatePassWord}/>
+                                        <input type={"text"} placeholder="パスワード" value={this.state.password}
+                                               onChange={this.updatePassWord}/>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                             <br/>
-                            <button className="btn  btnAuthSubmit pt-3 pb-3" type={"submit"} onClick={this.handleSubmit}>ログイン</button>
+                            <button className="btn  btnAuthSubmit pt-3 pb-3" type={"submit"}
+                                    onClick={this.handleSubmit}>ログイン
+                            </button>
                         </form>
                     </div>
                 </div>

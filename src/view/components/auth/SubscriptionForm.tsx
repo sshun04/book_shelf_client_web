@@ -32,6 +32,7 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
         this.updatePassWord = this.updatePassWord.bind(this);
         this.updateEmail = this.updateEmail.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.validateValue  =this.validateValue.bind(this);
     }
 
     NavigateToHome() {
@@ -57,18 +58,25 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
         });
     }
 
-    handleSubmit() {
+    validateValue(): boolean {
         if (!this.state.emailAddress.includes('@')) {
             console.log("email form isn't correct");
-            return;
+            return false;
         }
         if (this.state.password.length < 8) {
             console.log("password must be 8 characters or longer");
-            return;
+            return false;
         }
         if (this.state.name.length === 0) {
-            return;
+            return false;
         }
+        return true
+    }
+
+    handleSubmit() {
+        // if (!this.validateValue()){
+        //     return
+        // }
         this.NavigateToHome()
     }
 
@@ -110,7 +118,9 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
                                 </tbody>
                             </table>
                             <br/>
-                            <button className="btn  btnAuthSubmit pt-3 pb-3" type={"submit"} onClick={this.handleSubmit}>登録する</button>
+                            <button className="btn  btnAuthSubmit pt-3 pb-3" type={"submit"}
+                                    onClick={this.handleSubmit}>登録する
+                            </button>
                         </form>
                     </div>
                 </div>
