@@ -1,18 +1,15 @@
 ul{
     list-style: none;
 }
-
-ul li{
+.bookGridList ul li{
     margin: 8px;
     width: 168px;
     font-size: 12px;
 }
-
-li img{
+.bookGridList li img{
     width: 100%;
     height: auto;
 }
-
 .flex{
     display: -webkit-flex;
     display: -moz-flex;
@@ -20,7 +17,6 @@ li img{
     display: -o-flex;
     display: flex;
 }
-
 .flex-grid{
     flex-direction: row;
     flex-wrap: wrap;

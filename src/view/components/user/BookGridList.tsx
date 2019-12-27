@@ -11,7 +11,7 @@ interface BookGridListProps {
 
 export default function BookGridList(props: BookGridListProps) {
     return (
-        <div className="justify-content-center">
+        <div className="bookGridList justify-content-center">
             <ul className="flex flex-grid  align-content-start">
                 <li>
                     <Book

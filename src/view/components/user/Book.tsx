@@ -12,7 +12,7 @@ class Book extends React.Component<Props, {}> {
         return (
             <div>
                 <a href="#">
-                    <img className="img-fluid img-thumbnail"
+                    <img className="img-fluid img-thumbnail" alt=""
                          src="https://images-fe.ssl-images-amazon.com/images/I/41omYg1m1LL._SX338_QL80_TTH_.jpg"/>
                 </a>
                 <div className="mt-2 mb-2">
