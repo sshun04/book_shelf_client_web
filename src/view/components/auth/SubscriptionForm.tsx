@@ -6,12 +6,12 @@ import {withRouter, RouteComponentProps} from 'react-router'
 
 interface OwnProps extends RouteComponentProps {
     // 親コンポーネントから渡ってきたpropsの型
-    value: string
+    value: string | null
 }
 
 interface Props extends OwnProps {
     // コンポーネントに渡す型
-    value: string
+    value: string | null
 }
 
 interface SubscriptionState {
@@ -32,7 +32,7 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
         this.updatePassWord = this.updatePassWord.bind(this);
         this.updateEmail = this.updateEmail.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.validateValue  =this.validateValue.bind(this);
+        this.validateValue = this.validateValue.bind(this);
     }
 
     NavigateToHome() {

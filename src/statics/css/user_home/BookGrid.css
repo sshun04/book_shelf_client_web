@@ -1,0 +1,27 @@
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin: 8px;
+    width: 168px;
+    font-size: 12px;
+}
+
+li img{
+    width: 100%;
+    height: auto;
+}
+
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.flex-grid{
+    flex-direction: row;
+    flex-wrap: wrap;
+}

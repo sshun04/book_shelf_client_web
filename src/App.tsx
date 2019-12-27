@@ -8,20 +8,22 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import UserHomeContainer from "./view/container/UserHomeContainer";
 import ServiceTopContainer from "./view/container/ServiceTopContainer";
 import AuthContainer from "./view/container/AuthContainer";
+import BookListContainer from "./view/container/BookListContainer";
+import {linkAuth, linkUserBooks, linkUserHome} from "./utils/Links";
 // import createBrowserHistory from 'history/createBrowserHistory';
 
 // const store = createStore();
 // const history = createBrowserHistory();
 
 class App extends React.Component {
-
     public render() {
         return (
             <div className="App">
                 <Router>
                     <Route exact={true} path="/" component={ServiceTopContainer}/>
-                    <Route exact={true} path="/home" component={UserHomeContainer}/>
-                    <Route  path="/auth" component={AuthContainer}/>
+                    <Route path={linkAuth} component={AuthContainer}/>
+                    <Route path={linkUserHome} component={UserHomeContainer}/>
+                    <Route path={linkUserBooks} component={BookListContainer}/>
                 </Router>
                 <Footer/>
             </div>

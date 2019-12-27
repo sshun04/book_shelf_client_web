@@ -4,14 +4,8 @@ import '../../../statics/css/auth/AuthForm.css';
 import {withRouter, RouteComponentProps} from 'react-router'
 import {Link} from "react-router-dom";
 
-interface OwnProps extends RouteComponentProps {
-    // 親コンポーネントから渡ってきたpropsの型
-    value: string
-}
-
-interface Props extends OwnProps {
-    // コンポーネントに渡す型
-    value: string
+interface Props extends RouteComponentProps {
+    value: string | null
 }
 
 interface LoginState {
@@ -19,7 +13,6 @@ interface LoginState {
     password: string,
     isUsingName: boolean
 }
-
 
 class LoginForm extends React.Component<Props, LoginState> {
     constructor(props: Readonly<Props>) {
@@ -33,11 +26,10 @@ class LoginForm extends React.Component<Props, LoginState> {
         this.updateIdentity = this.updateIdentity.bind(this);
         this.updatePassWord = this.updatePassWord.bind(this);
         this.validateValue = this.validateValue.bind(this);
-
     }
 
     navigateToHome() {
-        this.props.history.push("/home")
+        this.props.history.push("/user/home")
     }
 
     updateIdentity(event: React.FormEvent<HTMLInputElement>) {

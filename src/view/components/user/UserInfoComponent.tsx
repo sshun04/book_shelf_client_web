@@ -50,7 +50,6 @@ class UserInfoComponent extends React.Component<UserInfoProps> {
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </section>

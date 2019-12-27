@@ -1,8 +1,8 @@
 import * as React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../statics/css/Header.css'
+import '../../../statics/css/Header.css'
 import {Link} from 'react-router-dom'
-import Search from "./Search";
+import Search from "../Search";
 
 
 class HeaderTop extends React.Component<any, any> {

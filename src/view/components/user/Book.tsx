@@ -1,33 +1,27 @@
 import * as React from "react";
-import {withRouter, RouteComponentProps} from 'react-router'
+import '../../../statics/css/user_home/Book.css'
 
-
-interface Props extends RouteComponentProps {
-    value: string
+interface Props {
     author: string
     title: string
     imgUrl: string
 }
 
-interface State {
-    value: string
-}
-
-class Book extends React.Component<Props, State> {
+class Book extends React.Component<Props, {}> {
     render() {
         return (
             <div>
                 <a href="#">
                     <img className="img-fluid img-thumbnail"
-                         src={this.props.imgUrl}/>
+                         src="https://images-fe.ssl-images-amazon.com/images/I/41omYg1m1LL._SX338_QL80_TTH_.jpg"/>
                 </a>
-                <div>
-                    <div className="bookTitle text-nowrap text-truncate">{this.props.title}</div>
-                    <div className="bookAuthor text-nowrap text-truncate">{this.props.author}</div>
+                <div className="mt-2 mb-2">
+                    <p className="bookTitle text-nowrap text-truncate m-0">寄宿学校のジュリエット</p>
+                    <p className="bookAuthor text-nowrap text-truncate m-0">金田陽介</p>
                 </div>
             </div>
         )
     }
 }
 
-export default withRouter(Book)
+export default Book;

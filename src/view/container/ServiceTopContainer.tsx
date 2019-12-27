@@ -1,7 +1,6 @@
 import * as React from "react";
-import HeaderTop from "../components/HeaderTop";
+import HeaderTop from "../components/header/HeaderTop";
 import "@material-ui/icons";
-
 
 class ServiceTopContainer extends React.Component<any, any> {
     render() {
