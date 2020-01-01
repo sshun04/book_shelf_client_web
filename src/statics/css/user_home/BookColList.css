@@ -16,3 +16,10 @@ ul{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.flex-vertical{
+    display: inline-flex;
+    align-items: center;
+    padding-right: 16px;
+    cursor: pointer;
+}

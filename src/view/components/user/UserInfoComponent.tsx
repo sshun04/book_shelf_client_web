@@ -10,6 +10,47 @@ interface UserInfoProps {
     thisMonth: number
 }
 
+export function UserInfo(props: UserInfoProps) {
+    return (
+        <section className="top">
+            <div className="container">
+                <div className="topWrapper">
+                    <div className="row ">
+                        <div className="userIcon">
+                            <img className="rounded-circle"
+                                 src="https://avatars1.githubusercontent.com/u/41961752?s=460&v=4"
+                                 width="80px" height="80px"/>
+                        </div>
+                        <div className="text-left">
+                            <div className="userName ml-3">Shunsukeさん</div>
+                            <div className="userId ml-3">@ssh04</div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="row">
+                        <table className="table recordTable">
+                            <thead>
+                            <th scope="col">蔵書</th>
+                            <th scope="col">読了</th>
+                            <th scope="col">未読</th>
+                            <th scope="col">今月</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{props.numOfBook}冊</td>
+                                <td>{props.done}冊</td>
+                                <td>{props.notYet}冊</td>
+                                <td>{props.thisMonth}冊</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
 class UserInfoComponent extends React.Component<UserInfoProps> {
     constructor(props: UserInfoProps) {
         super(props);
@@ -38,7 +79,7 @@ class UserInfoComponent extends React.Component<UserInfoProps> {
                                 <th scope="col">蔵書</th>
                                 <th scope="col">読了</th>
                                 <th scope="col">未読</th>
-                                <th scope="col" >今月</th>
+                                <th scope="col">今月</th>
                                 </thead>
                                 <tbody>
                                 <tr>

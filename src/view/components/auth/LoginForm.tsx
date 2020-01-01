@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../../statics/css/auth/AuthForm.css';
 import {withRouter, RouteComponentProps} from 'react-router'
 import {Link} from "react-router-dom";
+import {linkUserHome} from "../../../utils/Links";
 
 interface Props extends RouteComponentProps {
     value: string | null
@@ -29,7 +30,7 @@ class LoginForm extends React.Component<Props, LoginState> {
     }
 
     navigateToHome() {
-        this.props.history.push("/user/home")
+        this.props.history.push(linkUserHome)
     }
 
     updateIdentity(event: React.FormEvent<HTMLInputElement>) {

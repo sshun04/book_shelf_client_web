@@ -2,6 +2,7 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../../statics/css/auth/AuthForm.css';
 import {withRouter, RouteComponentProps} from 'react-router'
+import {linkUserHome} from "../../../utils/Links";
 
 
 interface OwnProps extends RouteComponentProps {
@@ -36,7 +37,7 @@ class SubscriptionForm extends React.Component<Props, SubscriptionState> {
     }
 
     NavigateToHome() {
-        this.props.history.push("/home")
+        this.props.history.push(linkUserHome)
     }
 
     updateName(event: React.FormEvent<HTMLInputElement>) {
