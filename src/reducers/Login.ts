@@ -1,14 +1,11 @@
 import {loginActions} from "../actions/LoingAction";
 import {reducerWithInitialState} from 'typescript-fsa-reducers';
+import { AuthState } from '.';
 
-export interface LoginState {
-    emailAddress: string
-    password: string
-}
-
-const initialState: LoginState = {
+const initialState: AuthState = {
+    userName:"",
     emailAddress: "",
-    password: ""
+    password: "",
 };
 
 export const loginReducer = reducerWithInitialState(initialState)
@@ -17,5 +14,10 @@ export const loginReducer = reducerWithInitialState(initialState)
     })
     .case(loginActions.updatePassword, (state, password) => {
         return Object.assign({}, state, {password})
+    })
+    .case(loginActions.startLogin,(state :AuthState,) =>{
+
+        return Object.assign({})
     });
+
 // TODO implement post loginform to backend, using axios,middleware

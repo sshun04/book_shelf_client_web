@@ -34,18 +34,12 @@
       }
     ],
     "jsx-no-lambda": false,
-    "member-access": [
-      false
-    ],
-    "ordered-imports": [
-      false
-    ],
-    "object-literal-sort-keys": [
-      false
-    ],
-    "interface-name": [
-      false
-    ],
-    "no-console": false
+    "member-access": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "no-console": false,
+    "no-empty-interface": false,
+    "interface-over-type-literal": false
   }
 }
