@@ -32,7 +32,7 @@ export function ColBook(props: Props) {
             <div className="infoWrapper">
                 <p className="bookTitle text-nowrap text-truncate">{props.title}</p>
                 <p className="bookAuthor text-nowrap text-truncate">{props.author}</p>
-                <p className="startRead"><a>読み始める</a></p>
+                <p className="startRead"><a>情報を見る</a></p>
             </div>
         </div>
     )

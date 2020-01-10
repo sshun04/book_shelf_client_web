@@ -50,16 +50,14 @@ class LoginForm extends React.Component<Props, LoginState> {
             console.log("password must be 8 characters or longer");
             return false;
         }
-        if (this.state.identity.length === 0) {
-            return false;
-        }
-        return true
+        return this.state.identity.length !== 0;
+
     }
 
     handleSubmit() {
         // if (!this.validateValue()) {
-        //     return;
-        // }
+        //         //     return;
+        //         // }
         this.navigateToHome();
     }
 
@@ -69,7 +67,7 @@ class LoginForm extends React.Component<Props, LoginState> {
                 <div className="justify-content-center text-center">
                     <h1 className="h1 mb-3">ログイン</h1>
                     <p className="mb-0">アカウントをお持ちの方は、下記からログインしてください。</p>
-                    <p> まだ登録してない方は<Link to="/signup">新規登録</Link>して下さい。</p>
+                    <p> まだ登録してない方は<Link to="/auth/signup">新規登録</Link>して下さい。</p>
                     <br/>
                     <div className="signUpArea mx-auto">
                         <form>
